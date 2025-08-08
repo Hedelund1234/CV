@@ -1,10 +1,23 @@
 .main-layout {
-    background-color: #fdfaf4; /* lys beige baggrund */
+    background-color: #fdfaf4;
     min-height: 100vh;
-    color: #5a4a3b; /* mørk varm brun tekst */
+    color: #5a4a3b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* top - midte - bund */
+}
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* så den ligger over indhold */
 }
 
 .main-content {
     padding: 2rem;
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
 }
