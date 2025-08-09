@@ -90,3 +90,13 @@
         padding: 1rem 1.15rem 1rem;
     }
 }
+
+.headline {
+    margin: 0 0 1rem;
+    font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.8rem);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.3rem;
+}

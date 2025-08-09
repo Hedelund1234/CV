@@ -1,0 +1,21 @@
+﻿.profil-layout {
+    display: flex;
+    justify-content: center; /* centrerer hele layoutet horisontalt */
+    align-items: flex-start; /* du kan ændre til center hvis det også skal centreres vertikalt */
+    gap: 2rem; /* afstand mellem venstre og højre side */
+    max-width: 2000px; /* for at holde layoutet smalt og centralt */
+    margin: 0 auto; /* centrerer containeren på siden */
+    padding: 1rem;
+}
+
+.left-side-section {
+    flex: 7; /* 7 ud af 10 dele */
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side-section {
+    flex: 3; /* 3 ud af 10 dele */
+    display: flex;
+    flex-direction: column;
+}

@@ -1,5 +1,42 @@
-﻿<h3>UddannelserComponent</h3>
+﻿@using CV.Interfaces
+@using CV.Models
+@inject IImportDataFromJsonService ImportDataService
+
+@if (profil is null)
+{
+    <p>Indlæser...</p>
+}
+else if (profil.Erfaringer?.Count > 0)
+{
+    <h2 class="headline">Uddannelser</h2>
+    <ul class="education-list">
+        @foreach (var u in profil.Uddannelser)
+        {
+            <li class="education-item">
+                <article class="card">
+                    <header class="row">
+                        <h3 class="education">
+                            <span class="institution">@u.Instituion</span>,
+                            <span class="location">@u.Lokation</span> -
+                            <span class="institution-name">@u.UddannelsesNavn</span>
+                        </h3>
+                    </header>
+                    <p class="meta">@u.Periode</p>
+                </article>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Ingen erfaringer tilgængelige.</p>
+}
 
 @code {
+    private Profil? profil;
 
+    protected override async Task OnInitializedAsync()
+    {
+        profil = await ImportDataService.GetCVAsync();
+    }
 }
