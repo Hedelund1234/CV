@@ -1,0 +1,93 @@
+﻿/* Grid-container: lad kolonner fylde hele rækken og styr kun med gap */
+.github-list {
+    list-style: none;
+    margin: 0 auto; /* centrer grid’et */
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.3rem;
+    justify-items: stretch;
+    width: 80%; /* fylder kun 80% af forælderens bredde */
+}
+
+/* Kortet: lad det fylde kolonnen – fjern max-width, behold indvendig padding */
+.github-card {
+    background: var(--accent-weak);
+    border: 2px solid #5a3e2b;
+    border-radius: 10px;
+    padding: 1.2rem 1.4rem;
+    width: 100%;
+    /* fjern denne: max-width: 350px; */
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ok at beholde – påvirker kun indholdet i kortet */
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    text-align: center;
+}
+
+    .github-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        border-color: #3e2a1d;
+    }
+
+.project-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    margin-bottom: 0.6rem;
+}
+
+    .project-name:hover {
+        text-decoration: underline;
+    }
+
+.project-desc {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.link-btn {
+    display: inline-block;
+    background: #d2b48c; /* lys brun */
+    color: #3e2a1d; /* mørk brun tekst */
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 1px solid #5a3e2b;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+    .link-btn:hover {
+        background: #c19a6b; /* mørkere brun ved hover */
+        transform: translateY(-1px);
+    }
+
+.headline {
+    text-align: center; /* centrerer teksten */
+    color: #5a3e2b; /* mørk brun farve */
+    font-weight: 800; /* ekstra fed */
+    font-size: 1.8rem; /* lidt større end standard */
+    margin-bottom: 1rem; /* lidt luft under overskriften */
+    letter-spacing: 0.5px; /* en anelse mere afstand mellem bogstaver */
+}
+
+@media (prefers-color-scheme: dark) {
+    .headline {
+        color: #d2b48c; /* lys brun i mørk tilstand */
+    }
+}

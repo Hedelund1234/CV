@@ -1,7 +1,24 @@
-﻿@page "/projekter"
+﻿@using CV.Interfaces
+@using CV.Models.GithubModels
+@inject IGithubService GithubService
 
-<h1>Projekter</h1>
+@page "/projekter"
+
+<CV.Components.ProjectComponents.GithubProjectComponent GithubRepo="githubRepo" />
 
 @code {
+	private List<GithubRepo> githubRepo = new();
+	private string githubName = "hedelund1234";
 
+	protected override async Task OnInitializedAsync()
+	{
+		try
+		{
+			githubRepo = await GithubService.GetPublicRepoAsync(githubName);
+		}
+		catch
+		{
+			githubRepo = new();
+		}
+	}
 }

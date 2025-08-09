@@ -1,0 +1,39 @@
+﻿@using CV.Models.GithubModels
+
+@if (GithubRepo is null)
+{
+    <p>Indlæser...</p>
+}
+else if (GithubRepo.Count > 0)
+{
+    <h2 class="headline">Github Projekter</h2>
+    <ul class="github-list">
+        @foreach (var project in GithubRepo)
+        {
+            <li class="github-card">
+                <a href="@project.html_url" target="_blank" class="project-name">@project.name</a>
+
+                @if (!string.IsNullOrWhiteSpace(project.description))
+                {
+                    <p class="project-desc">@project.description</p>
+                }
+
+                <div class="project-links">
+                    <a href="@project.html_url" target="_blank" class="link-btn">View on GitHub</a>
+                    @if (!string.IsNullOrWhiteSpace(project.homepage))
+                    {
+                        <a href="@project.homepage" target="_blank" class="link-btn">Live Demo</a>
+                    }
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Ingen projekter tilgængelige.</p>
+}
+
+@code {
+	[Parameter] public List<GithubRepo> GithubRepo { get; set; } = new();
+}
