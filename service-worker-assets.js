@@ -33,11 +33,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-Xn3cYRNjRlYYBnHkAWRP6Up5KoejJleq+nmG8+GYdKw=",
+      "hash": "sha256-IWcmNDGN9ZW8ZoUkl61BAuunT3LF5tDIPDpDkBdDQXg=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-8QbnKkvsa1Juv2lXUEPKuuQMGo1IsCDPzSWTCx1Q2HI=",
+      "hash": "sha256-2ji18EFi5af3yj9qmxrqibi4vQdnE4ZnobnqXETAHwI=",
       "url": "_framework\/CV.wasm"
     },
     {
@@ -205,7 +205,7 @@
       "url": "images\/FrederikBilledeSoldat.png"
     },
     {
-      "hash": "sha256-guS344hEFkr89GFddW8iQBOWuWlr87knlHBpg07WKJA=",
+      "hash": "sha256-bRx0Fej51F4XpnE2goXnM5ug6RnH3+c3y9LagfsPsAs=",
       "url": "index.html"
     },
     {
@@ -213,5 +213,5 @@
       "url": "manifest.webmanifest"
     }
   ],
-  "version": "Yoi0WZ6h"
+  "version": "tk9tPuPV"
 };
