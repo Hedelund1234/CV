@@ -2,15 +2,15 @@
 @using CV.Models
 @inject IImportDataFromJsonService ImportDataService
 
-@if (profil is null)
+@if (Profil is null)
 {
     <p>Indlæser...</p>
 }
-else if (profil.Erfaringer?.Count > 0)
+else if (Profil.Erfaringer?.Count > 0)
 {
     <h2 class="headline">Uddannelser</h2>
     <ul class="education-list">
-        @foreach (var u in profil.Uddannelser)
+        @foreach (var u in Profil.Uddannelser)
         {
             <li class="education-item">
                 <article class="card">
@@ -33,10 +33,5 @@ else
 }
 
 @code {
-    private Profil? profil;
-
-    protected override async Task OnInitializedAsync()
-    {
-        profil = await ImportDataService.GetCVAsync();
-    }
+    [Parameter] public Profil? Profil { get; set; }
 }

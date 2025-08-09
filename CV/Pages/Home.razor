@@ -1,0 +1,27 @@
+﻿@using CV.Interfaces
+@using CV.Models
+@inject IImportDataFromJsonService ImportDataService
+
+@page "/"
+
+
+<div class="profil-layout">
+	<div class="left-side-section">
+		<CV.Components.ErfaringerComponent Profil="profil" />
+
+		<CV.Components.UddannelserComponent Profil="profil" />
+	</div>
+	<div class="right-side-section">
+		
+	</div>
+</div>
+
+
+@code {
+	private Profil? profil;
+
+	protected override async Task OnInitializedAsync()
+	{
+		profil = await ImportDataService.GetCVAsync();
+	}
+}
