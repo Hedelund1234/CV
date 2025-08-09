@@ -1,0 +1,105 @@
+{
+  "navn": "Frederik Hedelund Pedersen",
+  "kontakt": {
+    "adresse": "Gl. Kongevej 31, 6000 Kolding",
+    "telefon": "+45 53 30 64 71",
+    "email": "frederikhedelund@gmail.com"
+  },
+  "erfaring": [
+    {
+      "firma": "EWII",
+      "lokation": "Kolding",
+      "stilling": "Software udvikler",
+      "periode": "Oktober 2024 - nu",
+      "beskrivelse": "Studentermedhjælper i EWIIs integrations- og udviklingsteam. Arbejder med softwareudvikling, integrationer og optimering af interne systemer."
+    },
+    {
+      "firma": "Siemens Gamesa",
+      "lokation": "Vejle",
+      "stilling": "Frontend- og Backend developer",
+      "periode": "Juli 2024 - September 2024",
+      "beskrivelse": "Studentermedhjælper i Equipment/Digitalization. Arbejdede med udvikling i både frontend og backend, samt automatisering af processer."
+    },
+    {
+      "firma": "Forsvaret [FSR/CIS]",
+      "lokation": "Fredericia",
+      "stilling": "Teamleder/Korporal",
+      "periode": "Marts 2023 - Februar 2024",
+      "beskrivelse": "Teamleder for specialister i Teknisk kommunikationsenhed (Communication Information Systems). Ansvar for koordinering, planlægning og drift."
+    },
+    {
+      "firma": "Forsvaret [SLFR/XIII]",
+      "lokation": "Haderslev",
+      "stilling": "Korporal/Holdfører",
+      "periode": "Januar 2021 - Marts 2023",
+      "beskrivelse": "Kampsoldat og holdfører i stående reaktionsstyrke ved Slesvigske Fodregiment. Ansvar for træning, operationel ledelse og samarbejde i pressede situationer."
+    },
+    {
+      "firma": "NATO Mission Irak",
+      "lokation": "Irak",
+      "stilling": "Udsendt soldat",
+      "periode": "November 2021 - Marts 2022",
+      "beskrivelse": "Udsendt med det danske forsvar i samarbejde med NATO. Arbejdede i grupper op til 10 mand. Udførte sikrings- og eskorteopgaver i operativt miljø."
+    },
+    {
+      "firma": "Forsvaret [JDR]",
+      "lokation": "Holstebro",
+      "stilling": "Konstabelelev",
+      "periode": "Februar 2020 - Januar 2021",
+      "beskrivelse": "Hærens reaktionsstyrke uddannelse ved kamptropperne samt værnepligten."
+    }
+  ],
+  "uddannelse": [
+    {
+      "institution": "UCL Erhvervsakademi",
+      "lokation": "Vejle",
+      "uddannelse": "Datamatiker",
+      "periode": "2024 - 2026"
+    },
+    {
+      "institution": "International Business College",
+      "lokation": "Kolding",
+      "uddannelse": "HHX",
+      "periode": "2016 - 2019"
+    }
+  ],
+  "kompetencer": [
+    "Kritisk tænkning",
+    "Problemløsning",
+    "Samarbejde",
+    "Analytisk tænkning",
+    "Lederskab",
+    "Planlægning og koordinering",
+    "Kommunikation",
+    "Tilpasningsevne",
+    "Beslutningstagning under pres",
+    "Agil udvikling (Scrum)"
+  ],
+  "tekniskeFærdigheder": [
+    "C#",
+    "SQL",
+    "ASP.NET Core",
+    "Blazor",
+    "REST API design",
+    "Microservices",
+    "Azure DevOps",
+    "Git/GitHub",
+    "Continuous Integration/Continuous Deployment (CI/CD)",
+    "Docker"
+  ],
+  "udmaerkelser": [
+    "Didaktik: Metoder og Planlægning (Korporal, UC SYD)",
+    "Cisco CCNA Introduction to Networks",
+    "Operatør Forsvarets operative kommunikationssystemer"
+  ],
+  "sprog": [
+    {
+      "sprog": "Dansk",
+      "niveau": "Flydende"
+    },
+    {
+      "sprog": "Engelsk",
+      "niveau": "Flydende"
+    }
+  ]
+}

@@ -1,7 +1,23 @@
-﻿<footer class="footer">
+﻿@using CV.Interfaces
+@using CV.Models
+@inject IImportDataFromJsonService ImportDataService
+
+<footer class="footer">
     <div class="footer-content">
-        <span>Email: <a href="mailto:frederikhedelund@gmail.com">frederikhedelund@gmail.com</a></span>
-        <span>Telefon: <a href="tel:+4553306471">+45 53 30 64 71</a></span>
+        <span>
+            Email:
+            <a href="@($"mailto:{profil?.Kontakt.Email}")">
+                @profil?.Kontakt.Email
+            </a>
+        </span>
+
+        <span>
+            Telefon:
+            <a href="@($"tel:{profil?.Kontakt.Telefon}")">
+                @profil?.Kontakt.Telefon
+            </a>
+        </span>
+
         <a href="https://www.linkedin.com/in/frederik-hedelund-pedersen-420896256/" target="_blank" rel="noopener noreferrer" class="linkedin-icon" aria-label="LinkedIn">
             <!-- LinkedIn SVG ikon -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -10,3 +26,12 @@
         </a>
     </div>
 </footer>
+
+@code {
+    private Profil? profil;
+
+    protected override async Task OnInitializedAsync()
+    {
+        profil = await ImportDataService.GetCVAsync();
+    }
+}

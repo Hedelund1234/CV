@@ -1,0 +1,14 @@
+﻿@using CV.Interfaces
+@using CV.Models
+@inject IImportDataFromJsonService ImportDataService
+
+<h3>Erfaringer</h3>
+
+@code {
+    private Profil? profil;
+
+    protected override async Task OnInitializedAsync()
+    {
+        profil = await ImportDataService.GetCVAsync();
+    }
+}
