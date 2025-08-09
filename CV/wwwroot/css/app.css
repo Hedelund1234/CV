@@ -101,3 +101,40 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
+#loading {
+    position: fixed;
+    inset: 0; /* fylder hele skærmen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* placer indholdet i toppen */
+    background: #fffaf3; /* hele skærmen beige */
+    z-index: 9999;
+    text-align: center;
+    gap: 4px; /* afstand mellem spinner og tekst */
+    padding-top: 2rem; /* lidt luft ned fra toppen */
+}
+
+    #loading .loader {
+        width: 44px;
+        height: 44px;
+        border: 3px solid #d2b48c; /* lys brun */
+        border-top-color: #5a3e2b; /* mørk brun */
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin: 0 auto 10px;
+    }
+
+    #loading p {
+        margin: 0;
+        color: #5a3e2b;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
