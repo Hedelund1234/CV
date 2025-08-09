@@ -6,13 +6,31 @@
 
 
 <div class="profil-layout">
+
+	<div class="profil-billeder">
+		<img src="images/FrederikBillede.png" alt="Frederik Hedelund" class="profil-img" />
+		<img src="images/FrederikBilledeSoldat.png" alt="Frederik Hedelund - Soldat" class="profil-img" />
+	</div>
+
+	<div class="profil-tekst">
+		<h2>@profil?.Navn</h2>
+		<h3>@profil?.Kontakt.Telefon</h3>
+		<h3>@profil?.Kontakt.Email</h3>
+	</div>
+	
 	<div class="left-side-section">
 		<CV.Components.ErfaringerComponent Profil="profil" />
 
 		<CV.Components.UddannelserComponent Profil="profil" />
 	</div>
 	<div class="right-side-section">
-		
+		<CV.Components.SkillsComponent Profil="profil" />
+
+		<CV.Components.TechnicalSkillsComponent Profil="profil" />
+
+		<CV.Components.DistinctionsComponent Profil="profil" />
+
+		<CV.Components.LanguagesComponent Profil="profil" />
 	</div>
 </div>
 

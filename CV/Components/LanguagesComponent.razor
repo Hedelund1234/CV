@@ -1,0 +1,26 @@
+﻿@using CV.Models
+
+@if (Profil is null)
+{
+	<p>Indlæser...</p>
+}
+else if (Profil.Sprog?.Count > 0)
+{
+	<h2 class="headline">Sprog</h2>
+	<ul class="skills-list">
+		@foreach (var u in Profil.Sprog)
+		{
+			<li>
+				<span class="skill">@u.SprogNavn - @u.Niveau</span>
+			</li>
+		}
+	</ul>
+}
+else
+{
+	<p>Ingen sprog tilgængelige.</p>
+}
+
+@code {
+	[Parameter] public Profil? Profil { get; set; }
+}

@@ -1,6 +1,4 @@
-﻿@using CV.Interfaces
-@using CV.Models
-@inject IImportDataFromJsonService ImportDataService
+﻿@using CV.Models
 
 @if (Profil is null)
 {
@@ -16,7 +14,7 @@ else if (Profil.Erfaringer?.Count > 0)
                 <article class="card">
                     <header class="row">
                         <h3 class="company">
-                            <span class="firma">@e.Firma</span>,
+                            <span class="firma">@e.Firma</span>
                             <span class="lokation">@e.Lokation</span> -
                             <span class="stilling">@e.Stilling</span>
                         </h3>

@@ -1,0 +1,26 @@
+﻿@using CV.Models
+
+@if (Profil is null)
+{
+	<p>Indlæser...</p>
+}
+else if (Profil.Kompetencer?.Count > 0)
+{
+	<h2 class="headline">Kompetencer</h2>
+	<ul class="skills-list">
+		@foreach (var u in Profil.Kompetencer)
+		{
+			<li>
+				<span class="skill">@u</span>
+			</li>
+		}
+	</ul>
+}
+else
+{
+	<p>Ingen kompetencer tilgængelige.</p>
+}
+
+@code {
+	[Parameter] public Profil? Profil { get; set; }
+}

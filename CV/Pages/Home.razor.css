@@ -1,21 +1,54 @@
 ﻿.profil-layout {
     display: flex;
-    justify-content: center; /* centrerer hele layoutet horisontalt */
-    align-items: flex-start; /* du kan ændre til center hvis det også skal centreres vertikalt */
-    gap: 2rem; /* afstand mellem venstre og højre side */
-    max-width: 2000px; /* for at holde layoutet smalt og centralt */
-    margin: 0 auto; /* centrerer containeren på siden */
+    flex-wrap: wrap; /* gør at billeder og sektioner kan stables */
+    justify-content: center;
+    gap: 2rem;
+    max-width: 2000px;
+    margin: 0 auto;
     padding: 1rem;
 }
 
+.profil-billeder {
+    width: 100%; /* fylder hele bredden */
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profil-img {
+    max-width: 220px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
 .left-side-section {
-    flex: 7; /* 7 ud af 10 dele */
+    flex: 7;
     display: flex;
     flex-direction: column;
 }
 
 .right-side-section {
-    flex: 3; /* 3 ud af 10 dele */
+    flex: 3;
     display: flex;
     flex-direction: column;
 }
+
+.profil-tekst {
+    width: 100%; /* Fylder hele bredden */
+    text-align: center; /* Centrerer teksten horisontalt */
+    margin-bottom: 2rem; /* Lidt luft under teksten */
+}
+
+    .profil-tekst h2 {
+        margin: 0.2rem 0;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .profil-tekst h3 {
+        margin: 0.2rem 0;
+        font-size: 1.1rem;
+        font-weight: 400;

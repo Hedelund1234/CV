@@ -1,12 +1,10 @@
-﻿@using CV.Interfaces
-@using CV.Models
-@inject IImportDataFromJsonService ImportDataService
+﻿@using CV.Models
 
 @if (Profil is null)
 {
     <p>Indlæser...</p>
 }
-else if (Profil.Erfaringer?.Count > 0)
+else if (Profil.Uddannelser?.Count > 0)
 {
     <h2 class="headline">Uddannelser</h2>
     <ul class="education-list">
@@ -29,7 +27,7 @@ else if (Profil.Erfaringer?.Count > 0)
 }
 else
 {
-    <p>Ingen erfaringer tilgængelige.</p>
+    <p>Ingen uddannelser tilgængelige.</p>
 }
 
 @code {

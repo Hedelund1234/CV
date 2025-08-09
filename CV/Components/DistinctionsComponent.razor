@@ -1,0 +1,26 @@
+﻿@using CV.Models
+
+@if (Profil is null)
+{
+	<p>Indlæser...</p>
+}
+else if (Profil.Udmærkelser?.Count > 0)
+{
+	<h2 class="headline">Udmærkelser</h2>
+	<ul class="skills-list">
+		@foreach (var u in Profil.Udmærkelser)
+		{
+			<li>
+				<span class="skill">@u</span>
+			</li>
+		}
+	</ul>
+}
+else
+{
+	<p>Ingen udmærkelser tilgængelige.</p>
+}
+
+@code {
+	[Parameter] public Profil? Profil { get; set; }
+}
