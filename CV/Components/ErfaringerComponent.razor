@@ -2,7 +2,35 @@
 @using CV.Models
 @inject IImportDataFromJsonService ImportDataService
 
-
+@if (profil is null)
+{
+    <p>Indlæser...</p>
+}
+else if (profil.Erfaringer?.Count > 0)
+{
+    <ul class="experience-list">
+        @foreach (var e in profil.Erfaringer)
+        {
+            <li class="experience-item">
+                <article class="card">
+                    <header class="row">
+                        <h3 class="company">
+                            <span class="firma">@e.Firma</span>,
+                            <span class="lokation">@e.Lokation</span> -
+                            <span class="stilling">@e.Stilling</span>
+                        </h3>
+                    </header>
+                    <p class="meta">@e.Periode</p>
+                    <p class="desc">@e.Beskrivelse</p>
+                </article>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Ingen erfaringer tilgængelige.</p>
+}
 
 @code {
     private Profil? profil;
