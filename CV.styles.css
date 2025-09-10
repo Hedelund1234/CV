@@ -588,3 +588,37 @@
         margin: 0.2rem 0;
         font-size: 1.1rem;
         font-weight: 400;
+    }
+
+.download-pdf-btn[b-01f1m489jm] {
+    margin-bottom: 1rem;
+}
+
+@media print {
+    .download-pdf-btn[b-01f1m489jm] {
+        display: none;
+    }
+}
+
+.download-pdf-btn[b-01f1m489jm] {
+    background-color: #d2b48c; /* lys beige */
+    color: #5a3e2b; /* mørk brun tekst */
+    border: 2px solid #5a3e2b;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+    .download-pdf-btn:hover[b-01f1m489jm] {
+        background-color: #5a3e2b; /* mørk brun baggrund */
+        color: #fffaf3; /* lys/beige tekst */
+        border-color: #5a3e2b;
+    }
+
+    .download-pdf-btn:active[b-01f1m489jm] {
+        transform: scale(0.97); /* lille "tryk ned"-effekt */
+    }
