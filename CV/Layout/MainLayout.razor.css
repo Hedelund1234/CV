@@ -1,30 +1,41 @@
-/* S�rger for at hele siden altid er beige */
-html, body {
+﻿.main-layout {
     background-color: #fdfaf4;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* Dit layout */
-.main-layout {
-    background-color: #fdfaf4;
-    min-height: 100vh; /* fallback */
-    min-height: 100dvh; /* moderne mobiler (dynamic viewport height) */
+    min-height: 100vh;
     color: #5a4a3b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
     grid-template-rows: auto 1fr auto; /* top - midte - bund */
 }
 
-/* Sticky top/bund arver baggrunden, s� de ikke viser hvid */
-.nav-bar,
-.footer {
+.nav-bar {
     position: sticky;
-    background-color: inherit;
-    z-index: 1000;
+    top: 0;
+    z-index: 1000; /* så den ligger over indhold */
 }
 
 .main-content {
     padding: 2rem;
 }
+
+.footer {
+    position: sticky;
+    bottom: 0;
+}
+
+/* ← tilføj KUN dette: et fast baggrundslag der dækker hele viewporten */
+html, body {
+    margin: 0;
+}
+/* ingen hvide margins */
+body {
+    position: relative;
+}
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0; /* top:0; right:0; bottom:0; left:0 */
+        background: #fdfaf4; /* din beige */
+        z-index: -1; /* bag alt indhold */
+        pointer-events: none; /* aldrig klikbar */
+    }
