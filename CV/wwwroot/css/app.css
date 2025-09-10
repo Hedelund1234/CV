@@ -177,7 +177,8 @@ code {
 
     /* Billeder endnu mindre og uden pynt */
     .profil-img {
-        max-width: 110px; /* var 160px */
+        max-width: 100px !important; /* var 160px */
+        height: auto !important;
         border-radius: 8px;
         box-shadow: none;
         margin: 0;
