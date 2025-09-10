@@ -507,24 +507,6 @@
     position: sticky;
     bottom: 0;
 }
-
-/* ← tilføj KUN dette: et fast baggrundslag der dækker hele viewporten */
-html[b-86sn8xpty0], body[b-86sn8xpty0] {
-    margin: 0;
-}
-/* ingen hvide margins */
-body[b-86sn8xpty0] {
-    position: relative;
-}
-
-    body[b-86sn8xpty0]::before {
-        content: "";
-        position: fixed;
-        inset: 0; /* top:0; right:0; bottom:0; left:0 */
-        background: #fdfaf4; /* din beige */
-        z-index: -1; /* bag alt indhold */
-        pointer-events: none; /* aldrig klikbar */
-    }
 /* /Layout/NavMenu.razor.rz.scp.css */
 .navbar[b-swmlse6d06] {
     background-color: #cbb89d; /* varm beige-brun */
