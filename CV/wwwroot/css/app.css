@@ -159,102 +159,104 @@ code {
 /* THIS SECTION BELOW IS FOR PDF PRINT */
 
 @media print {
-    /* Tættere sideopsætning og generel nedskalering */
+    /* Side/typografi (behold som du har, små tweaks) */
     @page {
         size: A4 portrait;
         margin: 10mm;
     }
-    /* var 12mm */
+
     html {
         font-size: 12px;
     }
-    /* var 13px */
+
     body {
-        line-height: 1.25;
+        line-height: 1.22;
         -webkit-print-color-adjust: economy;
         print-color-adjust: economy;
     }
 
-    /* Billeder endnu mindre og uden pynt */
+    /* BILLEDER MEGET SMÅ */
     .profil-img {
-        max-width: 100px !important; /* var 160px */
+        width: 120px !important; /* fast bredde */
         height: auto !important;
-        border-radius: 8px;
-        box-shadow: none;
-        margin: 0;
+        max-width: none !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 6px;
     }
 
-    /* Tættere layout/gaps */
+    /* GAPS MELLEM BLOKKE NÆSTEN VÆK */
     .profil-layout {
-        gap: 0.6rem;
-        padding: 0.25rem;
+        /* Her lå den store afstand før */
+        gap: 0.25rem !important; /* var 0.6rem */
+        row-gap: 0.2rem !important; /* ekstra sikkerhed på lodret afstand */
+        column-gap: 0.35rem !important;
+        padding: 0.15rem !important; /* var 0.25rem */
+        align-items: flex-start;
     }
-    /* var 1rem/0.5rem */
+
     .profil-billeder {
-        gap: 0.6rem;
-        margin-bottom: 0.6rem;
+        gap: 0.35rem !important;
+        margin-bottom: 0.2rem !important; /* var 0.6rem */
     }
-    /* var 1rem */
 
-    /* Header-tekster lidt mindre og strammere linjeafstand */
     .profil-tekst {
-        margin-bottom: 0.6rem;
+        margin: 0.2rem 0 !important; /* var 0.6rem */
     }
 
-        .profil-tekst h2 {
-            font-size: 1.2rem; /* var 1.4rem */
-            margin: 0.05rem 0;
-            line-height: 1.1;
-        }
-
-        .profil-tekst h3 {
-            font-size: 0.85rem; /* var 0.95rem */
-            margin: 0.05rem 0;
-            line-height: 1.15;
-        }
-
-    /* Mindre mellemrum i kolonner/sektioner */
+    /* Kolonne-indhold tættere */
     .left-side-section,
     .right-side-section {
-        gap: 0.35rem;
+        gap: 0.2rem !important;
     }
-    /* var 0.5rem */
+    /* var 0.35rem */
 
-    /* Generelt mindre afstande på tekst og lister */
-    h1, h2, h3, h4 {
-        margin: 0.25rem 0 0.35rem;
-    }
-
-    p, li {
-        margin: 0.15rem 0;
+    /* Komprimer typiske tekstelementer */
+    :where(h1,h2,h3,h4) {
+        margin-block: 0.2rem !important;
+        line-height: 1.15;
     }
 
-    ul, ol {
-        margin: 0.2rem 0 0.2rem 1.1rem;
-        padding: 0;
+    :where(p,li) {
+        margin-block: 0.1rem !important;
     }
 
-    /* Hvis dine komponenter har sektion-wrappere, stram dem også (fallback-klasser) */
-    .cv-section,
-    .component-card {
-        margin: 0.35rem 0;
-        padding: 0;
-        border: 0;
+    :where(ul,ol) {
+        margin: 0.15rem 0 0.15rem 1rem !important;
+        padding: 0 !important;
+    }
+
+    /* Fjern top/bund-margin på første/sidste element i sektioner,
+       så der ikke opstår "luftlommer" */
+    .profil-tekst > *:first-child,
+    .left-side-section > *:first-child,
+    .right-side-section > *:first-child {
+        margin-top: 0 !important;
+    }
+
+    .profil-tekst > *:last-child,
+    .left-side-section > *:last-child,
+    .right-side-section > *:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* Fallback for komponent-wrappere */
+    .cv-section, .component-card {
+        margin: 0.2rem 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
     }
 
         .cv-section > * + * {
-            margin-top: 0.25rem;
+            margin-top: 0.15rem !important;
         }
 
-    /* Undgå brud på uheldige steder */
-    .profil-billeder,
-    .profil-tekst,
-    .cv-section,
-    h2, h3 {
+    /* Undgå uheldige sidebrud på overskrifter/billeder */
+    .profil-billeder, .profil-tekst, .cv-section, h2, h3 {
         break-inside: avoid;
     }
 
-    /* Fjern auto-URL’er ved print */
+    /* Ingen auto-URL’er */
     a[href]:after {
         content: "";
     }
