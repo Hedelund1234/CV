@@ -156,9 +156,105 @@ code {
     }
 }
 
+/* THIS SECTION BELOW IS FOR PDF PRINT */
+
 @media print {
+    /* Tættere sideopsætning og generel nedskalering */
+    @page {
+        size: A4 portrait;
+        margin: 10mm;
+    }
+    /* var 12mm */
+    html {
+        font-size: 12px;
+    }
+    /* var 13px */
+    body {
+        line-height: 1.25;
+        -webkit-print-color-adjust: economy;
+        print-color-adjust: economy;
+    }
+
+    /* Billeder endnu mindre og uden pynt */
+    .profil-img {
+        max-width: 110px; /* var 160px */
+        border-radius: 8px;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    /* Tættere layout/gaps */
+    .profil-layout {
+        gap: 0.6rem;
+        padding: 0.25rem;
+    }
+    /* var 1rem/0.5rem */
+    .profil-billeder {
+        gap: 0.6rem;
+        margin-bottom: 0.6rem;
+    }
+    /* var 1rem */
+
+    /* Header-tekster lidt mindre og strammere linjeafstand */
+    .profil-tekst {
+        margin-bottom: 0.6rem;
+    }
+
+        .profil-tekst h2 {
+            font-size: 1.2rem; /* var 1.4rem */
+            margin: 0.05rem 0;
+            line-height: 1.1;
+        }
+
+        .profil-tekst h3 {
+            font-size: 0.85rem; /* var 0.95rem */
+            margin: 0.05rem 0;
+            line-height: 1.15;
+        }
+
+    /* Mindre mellemrum i kolonner/sektioner */
+    .left-side-section,
+    .right-side-section {
+        gap: 0.35rem;
+    }
+    /* var 0.5rem */
+
+    /* Generelt mindre afstande på tekst og lister */
+    h1, h2, h3, h4 {
+        margin: 0.25rem 0 0.35rem;
+    }
+
+    p, li {
+        margin: 0.15rem 0;
+    }
+
+    ul, ol {
+        margin: 0.2rem 0 0.2rem 1.1rem;
+        padding: 0;
+    }
+
+    /* Hvis dine komponenter har sektion-wrappere, stram dem også (fallback-klasser) */
+    .cv-section,
+    .component-card {
+        margin: 0.35rem 0;
+        padding: 0;
+        border: 0;
+    }
+
+        .cv-section > * + * {
+            margin-top: 0.25rem;
+        }
+
+    /* Undgå brud på uheldige steder */
+    .profil-billeder,
+    .profil-tekst,
+    .cv-section,
+    h2, h3 {
+        break-inside: avoid;
+    }
+
+    /* Fjern auto-URL’er ved print */
     a[href]:after {
-        content: " (" attr(href) ")";
-        color: inherit;
+        content: "";
     }
 }
