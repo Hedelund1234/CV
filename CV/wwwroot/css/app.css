@@ -160,6 +160,9 @@ code {
 
 @media print {
     /* Side/typografi (behold som du har, små tweaks) */
+    html, body {
+        background: #fff !important;
+    }
     @page {
         size: A4 portrait;
         margin: 10mm;

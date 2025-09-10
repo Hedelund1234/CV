@@ -1,23 +1,30 @@
+/* Sørger for at hele siden altid er beige */
+html, body {
+    background-color: #fdfaf4;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dit layout */
 .main-layout {
     background-color: #fdfaf4;
-    min-height: 100vh;
+    min-height: 100vh; /* fallback */
+    min-height: 100dvh; /* moderne mobiler (dynamic viewport height) */
     color: #5a4a3b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
     grid-template-rows: auto 1fr auto; /* top - midte - bund */
 }
 
-.nav-bar {
+/* Sticky top/bund arver baggrunden, så de ikke viser hvid */
+.nav-bar,
+.footer {
     position: sticky;
-    top: 0;
-    z-index: 1000; /* så den ligger over indhold */
+    background-color: inherit;
+    z-index: 1000;
 }
 
 .main-content {
     padding: 2rem;
-}
-
-.footer {
-    position: sticky;
-    bottom: 0;
 }
