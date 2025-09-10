@@ -484,28 +484,35 @@
         color: #fdfaf4; /* lys beige ikon ved hover */
     }
 /* /Layout/MainLayout.razor.rz.scp.css */
+/* S�rger for at hele siden altid er beige */
+html[b-86sn8xpty0], body[b-86sn8xpty0] {
+    background-color: #fdfaf4;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dit layout */
 .main-layout[b-86sn8xpty0] {
     background-color: #fdfaf4;
-    min-height: 100vh;
+    min-height: 100vh; /* fallback */
+    min-height: 100dvh; /* moderne mobiler (dynamic viewport height) */
     color: #5a4a3b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
     grid-template-rows: auto 1fr auto; /* top - midte - bund */
 }
 
-.nav-bar[b-86sn8xpty0] {
+/* Sticky top/bund arver baggrunden, s� de ikke viser hvid */
+.nav-bar[b-86sn8xpty0],
+.footer[b-86sn8xpty0] {
     position: sticky;
-    top: 0;
-    z-index: 1000; /* s� den ligger over indhold */
+    background-color: inherit;
+    z-index: 1000;
 }
 
 .main-content[b-86sn8xpty0] {
     padding: 2rem;
-}
-
-.footer[b-86sn8xpty0] {
-    position: sticky;
-    bottom: 0;
 }
 /* /Layout/NavMenu.razor.rz.scp.css */
 .navbar[b-swmlse6d06] {
