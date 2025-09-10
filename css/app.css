@@ -160,6 +160,10 @@ code {
 
 @media print {
     /* Side/typografi (behold som du har, små tweaks) */
+    * {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
     html, body {
         background: #fff !important;
     }

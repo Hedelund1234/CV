@@ -484,36 +484,47 @@
         color: #fdfaf4; /* lys beige ikon ved hover */
     }
 /* /Layout/MainLayout.razor.rz.scp.css */
-/* S�rger for at hele siden altid er beige */
-html[b-86sn8xpty0], body[b-86sn8xpty0] {
-    background-color: #fdfaf4;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* Dit layout */
 .main-layout[b-86sn8xpty0] {
     background-color: #fdfaf4;
-    min-height: 100vh; /* fallback */
-    min-height: 100dvh; /* moderne mobiler (dynamic viewport height) */
+    min-height: 100vh;
     color: #5a4a3b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
     grid-template-rows: auto 1fr auto; /* top - midte - bund */
 }
 
-/* Sticky top/bund arver baggrunden, s� de ikke viser hvid */
-.nav-bar[b-86sn8xpty0],
-.footer[b-86sn8xpty0] {
+.nav-bar[b-86sn8xpty0] {
     position: sticky;
-    background-color: inherit;
-    z-index: 1000;
+    top: 0;
+    z-index: 1000; /* så den ligger over indhold */
 }
 
 .main-content[b-86sn8xpty0] {
     padding: 2rem;
 }
+
+.footer[b-86sn8xpty0] {
+    position: sticky;
+    bottom: 0;
+}
+
+/* ← tilføj KUN dette: et fast baggrundslag der dækker hele viewporten */
+html[b-86sn8xpty0], body[b-86sn8xpty0] {
+    margin: 0;
+}
+/* ingen hvide margins */
+body[b-86sn8xpty0] {
+    position: relative;
+}
+
+    body[b-86sn8xpty0]::before {
+        content: "";
+        position: fixed;
+        inset: 0; /* top:0; right:0; bottom:0; left:0 */
+        background: #fdfaf4; /* din beige */
+        z-index: -1; /* bag alt indhold */
+        pointer-events: none; /* aldrig klikbar */
+    }
 /* /Layout/NavMenu.razor.rz.scp.css */
 .navbar[b-swmlse6d06] {
     background-color: #cbb89d; /* varm beige-brun */
