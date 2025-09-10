@@ -1,10 +1,12 @@
 ﻿@using CV.Interfaces
 @using CV.Models
+@using Microsoft.JSInterop
 @inject IImportDataFromJsonService ImportDataService
+@inject IJSRuntime JS
 
 @page "/"
 
-
+<button class="download-pdf-btn" @onclick="DownloadPdf">Download som PDF</button>
 <div class="profil-layout">
 
 	<div class="profil-billeder">
@@ -41,5 +43,12 @@
 	protected override async Task OnInitializedAsync()
 	{
 		profil = await ImportDataService.GetCVAsync();
+	}
+
+	private async Task DownloadPdf()
+	{
+		var name = profil?.Navn?.Replace(" ", "_") ?? "CV";
+		var fileName = $"CV_{name}_{DateTime.UtcNow:yyyy-MM}.pdf";
+		await JS.InvokeVoidAsync("cv.print", fileName);
 	}
 }

@@ -138,3 +138,27 @@ code {
         transform: rotate(360deg);
     }
 }
+@media print {
+    .nav-bar,
+    .footer {
+        display: none !important;
+    }
+
+    @page {
+        size: A4 portrait;
+        margin: 15mm;
+    }
+
+    h2,
+    h3 {
+        break-after: avoid-page;
+        page-break-after: avoid;
+    }
+}
+
+@media print {
+    a[href]:after {
+        content: " (" attr(href) ")";
+        color: inherit;
+    }
+}
