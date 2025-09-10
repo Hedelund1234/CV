@@ -138,3 +138,126 @@ code {
         transform: rotate(360deg);
     }
 }
+@media print {
+    .nav-bar,
+    .footer {
+        display: none !important;
+    }
+
+    @page {
+        size: A4 portrait;
+        margin: 15mm;
+    }
+
+    h2,
+    h3 {
+        break-after: avoid-page;
+        page-break-after: avoid;
+    }
+}
+
+/* THIS SECTION BELOW IS FOR PDF PRINT */
+
+@media print {
+    /* Side/typografi (behold som du har, små tweaks) */
+    @page {
+        size: A4 portrait;
+        margin: 10mm;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    body {
+        line-height: 1.22;
+        -webkit-print-color-adjust: economy;
+        print-color-adjust: economy;
+    }
+
+    /* BILLEDER MEGET SMÅ */
+    .profil-img {
+        width: 120px !important; /* fast bredde */
+        height: auto !important;
+        max-width: none !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 6px;
+    }
+
+    /* GAPS MELLEM BLOKKE NÆSTEN VÆK */
+    .profil-layout {
+        /* Her lå den store afstand før */
+        gap: 0.25rem !important; /* var 0.6rem */
+        row-gap: 0.2rem !important; /* ekstra sikkerhed på lodret afstand */
+        column-gap: 0.35rem !important;
+        padding: 0.15rem !important; /* var 0.25rem */
+        align-items: flex-start;
+    }
+
+    .profil-billeder {
+        gap: 0.35rem !important;
+        margin-bottom: 0.2rem !important; /* var 0.6rem */
+    }
+
+    .profil-tekst {
+        margin: 0.2rem 0 !important; /* var 0.6rem */
+    }
+
+    /* Kolonne-indhold tættere */
+    .left-side-section,
+    .right-side-section {
+        gap: 0.2rem !important;
+    }
+    /* var 0.35rem */
+
+    /* Komprimer typiske tekstelementer */
+    :where(h1,h2,h3,h4) {
+        margin-block: 0.2rem !important;
+        line-height: 1.15;
+    }
+
+    :where(p,li) {
+        margin-block: 0.1rem !important;
+    }
+
+    :where(ul,ol) {
+        margin: 0.15rem 0 0.15rem 1rem !important;
+        padding: 0 !important;
+    }
+
+    /* Fjern top/bund-margin på første/sidste element i sektioner,
+       så der ikke opstår "luftlommer" */
+    .profil-tekst > *:first-child,
+    .left-side-section > *:first-child,
+    .right-side-section > *:first-child {
+        margin-top: 0 !important;
+    }
+
+    .profil-tekst > *:last-child,
+    .left-side-section > *:last-child,
+    .right-side-section > *:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* Fallback for komponent-wrappere */
+    .cv-section, .component-card {
+        margin: 0.2rem 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+    }
+
+        .cv-section > * + * {
+            margin-top: 0.15rem !important;
+        }
+
+    /* Undgå uheldige sidebrud på overskrifter/billeder */
+    .profil-billeder, .profil-tekst, .cv-section, h2, h3 {
+        break-inside: avoid;
+    }
+
+    /* Ingen auto-URL’er */
+    a[href]:after {
+        content: "";
+    }
+}
