@@ -17,9 +17,19 @@
 }
 
 .project-card {
-    border-left: 2px solid var(--border);
-    padding-left: 1.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem 1rem 0.9rem;
+    box-shadow: var(--shadow);
+    transition: transform .16s ease, box-shadow .16s ease, border-color .2s ease;
 }
+
+    .project-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
+        border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+    }
 
 .project-title {
     margin: 0;
@@ -79,4 +89,21 @@
         grid-template-columns: 1fr 2fr;
         gap: 2rem;
     }
+}
+
+.project-repo {
+    margin: 0.1rem 0 0.4rem 0; /* Placeres tæt under titlen */
+    font-size: 0.75rem; /* Meget lille størrelse */
+    font-weight: 400; /* Ikke fed skrift */
+    color: var(--accent); /* Bruger din blå accent farve, men med lav gennemsigtighed */
+    opacity: 0.6; /* Gør den diskret */
+    font-family: monospace; /* Gør det tydeligt at det er kode/URL og nemt at læse */
+    letter-spacing: -0.2px;
+    word-break: break-all; /* Sikrer at lange links ikke ødelægger layoutet */
+}
+
+/* Gør den lidt tydeligere når man holder musen over kortet */
+.project-card:hover .project-repo {
+    opacity: 1;
+    transition: opacity 0.2s ease;
 }
