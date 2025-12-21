@@ -1,6 +1,8 @@
-﻿.profil-layout {
+﻿/* --- 1. BASIS LAYOUT (PC & PDF) --- */
+/* Dette layout bruges som standard af både computer og PDF */
+.profil-layout {
     display: flex;
-    flex-wrap: wrap; /* gør at billeder og sektioner kan stables */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     max-width: 2000px;
@@ -9,7 +11,7 @@
 }
 
 .profil-billeder {
-    width: 100%; /* fylder hele bredden */
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
@@ -37,9 +39,9 @@
 }
 
 .profil-tekst {
-    width: 100%; /* Fylder hele bredden */
-    text-align: center; /* Centrerer teksten horisontalt */
-    margin-bottom: 2rem; /* Lidt luft under teksten */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
     .profil-tekst h2 {
@@ -54,19 +56,11 @@
         font-weight: 400;
     }
 
+/* --- 2. DOWNLOAD PDF KNAP --- */
 .download-pdf-btn {
     margin-bottom: 1rem;
-}
-
-@media print {
-    .download-pdf-btn {
-        display: none;
-    }
-}
-
-.download-pdf-btn {
-    background-color: #d2b48c; /* lys beige */
-    color: #5a3e2b; /* mørk brun tekst */
+    background-color: #d2b48c;
+    color: #5a3e2b;
     border: 2px solid #5a3e2b;
     border-radius: 6px;
     padding: 0.5rem 1rem;
@@ -78,11 +72,49 @@
 }
 
     .download-pdf-btn:hover {
-        background-color: #5a3e2b; /* mørk brun baggrund */
-        color: #fffaf3; /* lys/beige tekst */
-        border-color: #5a3e2b;
+        background-color: #5a3e2b;
+        color: #fffaf3;
     }
 
-    .download-pdf-btn:active {
-        transform: scale(0.97); /* lille "tryk ned"-effekt */
+/* --- 3. MOBIL OPTIMERING (KUN PÅ SKÆRM) --- */
+/* Ved at bruge 'screen' sikrer vi, at disse regler ALDRIG rammer din PDF */
+@media screen and (max-width: 850px) {
+    .profil-layout {
+        padding: 1.5rem 15px;
+        gap: 1.5rem;
     }
+
+    .profil-billeder {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 1.5rem;
+    }
+
+    .profil-img {
+        max-width: 48%;
+    }
+
+    .left-side-section,
+    .right-side-section {
+        flex: 100%;
+        width: 100%;
+    }
+
+    .profil-tekst h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* --- 4. RENT PRINT LAYOUT --- */
+@media print {
+    .download-pdf-btn {
+        display: none;
+    }
+
+    /* Tvinger browseren til at printe farver og baggrunde korrekt */
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
