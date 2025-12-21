@@ -1,0 +1,82 @@
+﻿.headline {
+    margin: 0 0 0.4rem; /* Reduceret afstand under overskriften */
+    font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.8rem);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.3rem;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 0.5rem; /* Rykker hele listen tættere på Projekter-overskriften */
+    font-family: inherit; /* Sikrer samme font som resten af siden */
+}
+
+.project-card {
+    border-left: 2px solid var(--border);
+    padding-left: 1.5rem;
+}
+
+.project-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    font-family: inherit;
+}
+
+.project-description {
+    margin: 0.2rem 0 0.8rem 0; /* Placerer beskrivelsen lige under titlen */
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.4;
+    font-family: inherit;
+}
+
+/* Sektions labels (Teknologier / Highlights) */
+.section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    margin: 1rem 0 0.4rem 0;
+    font-weight: 800;
+    font-family: inherit;
+}
+
+/* Den fælles liste-stil */
+.point-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .point-list li {
+        position: relative;
+        padding-left: 1.2rem;
+        margin-bottom: 0.3rem;
+        color: var(--text);
+        font-size: 0.95rem;
+        line-height: 1.4;
+        font-family: inherit; /* Sikrer ensartet font i punkterne */
+    }
+
+        .point-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--muted);
+            font-weight: bold;
+        }
+
+@media (min-width: 800px) {
+    .project-details-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+    }
+}

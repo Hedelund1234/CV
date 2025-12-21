@@ -1,0 +1,57 @@
+﻿@using CV.Models
+
+@if (Profil is null)
+{
+	<p>Indlæser...</p>
+}
+else if (Profil.Projekter?.Count > 0)
+{
+    <h2 class="headline">Projekter</h2>
+    <div class="project-list">
+        @foreach (var e in Profil.Projekter)
+        {
+            <article class="project-card">
+                <header class="project-header">
+                    <h3 class="project-title">@e.Navn</h3>
+                    <div class="project-description">@e.Beskrivelse</div>
+                </header>
+
+                <div class="project-details-grid">
+                    @if (e.Teknologier?.Any() == true)
+                    {
+                        <div class="detail-section">
+                            <h4 class="section-label">Teknologier</h4>
+                            <ul class="point-list">
+                                @foreach (var tech in e.Teknologier)
+                                {
+                                    <li>@tech</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+
+                    @if (e.Highlights?.Any() == true)
+                    {
+                        <div class="detail-section">
+                            <h4 class="section-label">Highlights</h4>
+                            <ul class="point-list">
+                                @foreach (var high in e.Highlights)
+                                {
+                                    <li>@high</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </article>
+        }
+    </div>
+}
+else
+{
+	<p>Ingen Projekter tilgængelige.</p>
+}
+
+@code {
+	[Parameter] public Profil? Profil { get; set; }
+}

@@ -10,11 +10,17 @@ namespace CV.Models
         [JsonPropertyName("kontakt")]
         public Kontakt Kontakt { get; set; } = new();
 
+        [JsonPropertyName("profilTekst")]
+        public string ProfilTekst { get; set; } = "";
+
         [JsonPropertyName("erfaring")]
         public List<Erfaring> Erfaringer { get; set; } = new();
 
         [JsonPropertyName("uddannelse")]
         public List<Uddannelse> Uddannelser { get; set; } = new();
+
+        [JsonPropertyName("projekter")]
+        public List<Projekt> Projekter { get; set; } = new();
 
         [JsonPropertyName("kompetencer")]
         public List<string> Kompetencer { get; set; } = new();
