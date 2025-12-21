@@ -5,27 +5,28 @@
     "telefon": "+45 53 30 64 71",
     "email": "frederikhedelund@gmail.com"
   },
+  "profilTekst": "Softwareudvikler med en stærk baggrund i ledelse og teknisk/operationel eksekvering fra Forsvaret. Arbejder målrettet med moderne cloud-native arkitektur, herunder Dapr, microservices og integrationer i Azure-økosystemet.",
   "erfaring": [
     {
       "firma": "EWII",
       "lokation": "Kolding",
-      "stilling": "Software udvikler",
+      "stilling": "Softwareudvikler (Studentermedhjælper)",
       "periode": "Oktober 2024 - nu",
-      "beskrivelse": "Studentermedhjælper i EWIIs integrations- og udviklingsteam. Arbejder med softwareudvikling, integrationer og optimering af interne systemer."
+      "beskrivelse": "Udvikling og vedligeholdelse af komplekse integrationer i en microservice-arkitektur baseret på C# og .NET. Implementering af event-driven kommunikation via Azure Service Bus samt monitorering og udrulning i Azure. Fokus på høj driftssikkerhed og skalerbare systemløsninger."
     },
     {
       "firma": "Siemens Gamesa",
       "lokation": "Vejle",
-      "stilling": "Frontend- og Backend developer",
+      "stilling": "Frontend- og Backend developer (Studentermedhjælper)",
       "periode": "Juli 2024 - September 2024",
-      "beskrivelse": "Studentermedhjælper i Equipment/Digitalization. Arbejdede med udvikling i både frontend og backend, samt automatisering af processer."
+      "beskrivelse": "Fullstack-udvikling i Equipment/Digitalization-afdelingen. Arbejdede med automatisering af interne workflows og optimering af datastrømme mellem frontend-applikationer og backend-systemer."
     },
     {
       "firma": "Forsvaret [FSR/CIS]",
       "lokation": "Fredericia",
       "stilling": "Teamleder/Korporal",
       "periode": "Marts 2023 - Februar 2024",
-      "beskrivelse": "Teamleder for specialister i Teknisk kommunikationsenhed (Communication Information Systems). Ansvar for koordinering, planlægning og drift."
+      "beskrivelse": "Leder for specialister i en teknisk kommunikationsenhed. Ansvar for drift og fejlsøgning på komplekse netværkssystemer (CIS) samt koordinering af tekniske indsatser under operative forhold."
     },
     {
       "firma": "Forsvaret [SLFR/XIII]",
@@ -39,14 +40,14 @@
       "lokation": "Irak",
       "stilling": "Udsendt soldat",
       "periode": "November 2021 - Marts 2022",
-      "beskrivelse": "Udsendt med det danske forsvar i samarbejde med NATO. Arbejdede i grupper op til 10 mand. Udførte sikrings- og eskorteopgaver i operativt miljø."
+      "beskrivelse": "Udførelse af højrisiko sikrings- og eskorteopgaver i et internationalt operativt miljø. Krævede ekstrem høj grad af disciplin, tværkulturelt samarbejde og hurtig tilpasningsevne."
     },
     {
       "firma": "Forsvaret [JDR]",
       "lokation": "Holstebro",
       "stilling": "Konstabelelev",
       "periode": "Februar 2020 - Januar 2021",
-      "beskrivelse": "Hærens reaktionsstyrke uddannelse ved kamptropperne samt værnepligten."
+      "beskrivelse": "Gennemførelse af Hærens reaktionsstyrkeuddannelse hos kamptropperne, med fokus på grundlæggende militære færdigheder og disciplin."
     }
   ],
   "uddannelse": [
@@ -63,29 +64,49 @@
       "periode": "2016 - 2019"
     }
   ],
-  "kompetencer": [
-    "Kritisk tænkning",
-    "Problemløsning",
-    "Samarbejde",
-    "Analytisk tænkning",
-    "Lederskab",
-    "Planlægning og koordinering",
-    "Kommunikation",
-    "Tilpasningsevne",
-    "Beslutningstagning under pres",
-    "Agil udvikling (Scrum)"
+  "projekter": [
+    {
+      "navn": "SkyQuery",
+      "beskrivelse": "Et distribueret microservice-system designet til sikker hentning, lagring og levering af satellitbilleder baseret på MGRS-koordinater. Projektet fungerer som et proof-of-concept for en taktisk løsning til feltoperatører og analytikere.",
+      "teknologier": [
+        ".NET Aspire",
+        "Dapr",
+        "C# / .NET Core",
+        "Docker Compose",
+        "Pub/Sub Messaging",
+        "Clean Architecture"
+      ],
+      "highlights": [
+        "Implementering af sidecar-mønster med Dapr til state management og service invocation.",
+        "Anvendelse af Security-by-Design og Zero Trust-principper.",
+        "Orchestrering af services med .NET Aspire og Docker."
+      ],
+      "repository": "https://github.com/Hedelund1234/SkyQuery"
+    }
   ],
   "tekniskeFærdigheder": [
-    "C#",
-    "SQL",
-    "ASP.NET Core",
-    "Blazor",
-    "REST API design",
-    "Microservices",
-    "Azure DevOps",
-    "Git/GitHub",
-    "Continuous Integration/Continuous Deployment (CI/CD)",
-    "Docker"
+    "C# / .NET Core",
+    "Dapr (Distributed Application Runtime)",
+    "Azure (Service Bus, App Services, Functions)",
+    "Microservices Arkitektur",
+    "Clean Architecture",
+    "Event-Driven Design",
+    "Containerisering & Docker",
+    "SQL & Database Design",
+    "REST API Design",
+    "Azure DevOps & CI/CD",
+    "Git / GitHub"
+  ],
+  "kompetencer": [
+    "Lederskab & Teamkoordinering",
+    "Beslutningstagning under pres",
+    "Problemløsning & Kritisk tænkning",
+    "Agil udvikling (Scrum & Kanban)",
+    "Samarbejde & Kommunikation",
+    "Planlægning & Koordinering",
+    "Tilpasningsevne i dynamiske miljøer",
+    "Analytisk tænkning",
+    "Systematisk tilgang til komplekse problemer"
   ],
   "udmaerkelser": [
     "Didaktik: Metoder og Planlægning (Korporal, UC SYD)",
@@ -95,11 +116,11 @@
   "sprog": [
     {
       "sprog": "Dansk",
-      "niveau": "Flydende"
+      "niveau": "Modersmål"
     },
     {
       "sprog": "Engelsk",
-      "niveau": "Flydende"
+      "niveau": "Flydende / Professionelt"
     }
   ]
 }
