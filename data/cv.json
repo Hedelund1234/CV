@@ -10,15 +10,15 @@
     {
       "firma": "EWII",
       "lokation": "Kolding",
-      "stilling": "Softwareudvikler (Studentermedhjælper)",
-      "periode": "Oktober 2024 - nu",
+      "stilling": "Softwareudvikler",
+      "periode": "Oktober 2024 - nu | Deltid",
       "beskrivelse": "Udvikling og vedligeholdelse af komplekse integrationer i en microservice-arkitektur baseret på C# og .NET. Implementering af event-driven kommunikation via Azure Service Bus samt monitorering og udrulning i Azure. Fokus på høj driftssikkerhed og skalerbare systemløsninger."
     },
     {
       "firma": "Siemens Gamesa",
       "lokation": "Vejle",
-      "stilling": "Frontend- og Backend developer (Studentermedhjælper)",
-      "periode": "Juli 2024 - September 2024",
+      "stilling": "Frontend- og Backend developer",
+      "periode": "Juli 2024 - September 2024 | Deltid",
       "beskrivelse": "Fullstack-udvikling i Equipment/Digitalization-afdelingen. Arbejdede med automatisering af interne workflows og optimering af datastrømme mellem frontend-applikationer og backend-systemer."
     },
     {
