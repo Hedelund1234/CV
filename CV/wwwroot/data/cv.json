@@ -11,7 +11,7 @@
       "firma": "EWII",
       "lokation": "Kolding",
       "stilling": "Softwareudvikler",
-      "periode": "Oktober 2024 - nu | Deltid",
+      "periode": "Oktober 2024 - Juni 2026 | Deltid",
       "beskrivelse": "Udvikling og vedligeholdelse af komplekse integrationer i en microservice-arkitektur baseret på C# og .NET. Implementering af event-driven kommunikation via Azure Service Bus samt monitorering og udrulning i Azure. Fokus på høj driftssikkerhed og skalerbare systemløsninger."
     },
     {
@@ -82,6 +82,25 @@
         "Orchestrering af services med .NET Aspire og Docker."
       ],
       "repository": "https://github.com/Hedelund1234/SkyQuery"
+    },
+    {
+      "navn": "HeTests",
+      "beskrivelse": "Et test-framework og referencearkitektur i .NET, der demonstrerer hvordan man skriver pålidelige component- og contract-tests for microservices. Projektet leverer genbrugelige fixtures, der spinner rigtige afhængigheder (database, API-host, eksterne services) op i containere, så tests kører mod realistiske systemer i stedet for mocks.",
+      "teknologier": [
+        "C# / .NET 10",
+        "xUnit",
+        "Testcontainers (MsSql)",
+        "Specmatic (contract testing)",
+        "Entity Framework Core / SQL Server",
+        "Clean Architecture",
+        "Docker"
+      ],
+      "highlights": [
+        "Genbrugelige test-fixtures (ContainerApiHostFixture / InMemoryApiHostFixture) der starter API og afhængigheder i isolerede containere pr. testkørsel.",
+        "Contract testing med Specmatic, der validerer API'et mod OpenAPI-specifikationen og stubber eksterne services.",
+        "Component-tests af en Clean Architecture-løsning opdelt i Api-, Application-, Domain- og Infrastructure-lag."
+      ],
+      "repository": "https://github.com/Hedelund1234/HeTests"
     }
   ],
   "tekniskeFærdigheder": [
