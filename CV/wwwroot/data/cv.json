@@ -8,6 +8,13 @@
   "profilTekst": "Softwareudvikler med en stærk baggrund i ledelse og teknisk/operationel eksekvering fra Forsvaret. Arbejder målrettet med moderne cloud-native arkitektur, herunder Dapr, microservices og integrationer i Azure-økosystemet.",
   "erfaring": [
     {
+      "firma": "Forsvaret",
+      "lokation": "Danmark",
+      "stilling": "Cyber Systems Engineer",
+      "periode": "August 2026",
+      "beskrivelse": ""
+    },
+    {
       "firma": "EWII",
       "lokation": "Kolding",
       "stilling": "Softwareudvikler",
