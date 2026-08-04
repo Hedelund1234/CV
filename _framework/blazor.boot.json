@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CV",
   "resources": {
-    "hash": "sha256-sDyGr10ESy7oQeNQpGVL6lI2IJWwG+wODAWmMY5Qox4=",
+    "hash": "sha256-cbd5sw9trYEvktKRYyPrQHUUSSzMWp5G3toqDQLeiDk=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-JTswf4CBcNmmrTGm6DppxYNII8GVEmbA3iXD3bU1fcA="
     },
@@ -49,7 +49,7 @@
       "System.Text.Json.wasm": "sha256-zmeqOvyUl+h6Ivpvvwj2XolyJqWGi312qpL9xHwiMRY=",
       "System.Text.RegularExpressions.wasm": "sha256-QtzUiet1dIc7potIirp9lrs13Ub7rQR5SUxfR+TiKzA=",
       "System.Private.CoreLib.wasm": "sha256-5tvT/Jx8voZcZgy/YwxzH3Pmnl+O9h6KH0wvMcL6Of8=",
-      "CV.wasm": "sha256-obMRcbCArxb0Ey3sqhTL9lY6srYZwGVE4Hw+livv0ls="
+      "CV.wasm": "sha256-qcD8YYydqb2vwFNG2tft4S36cmhkE/Gi0skd3KclR7Q="
     }
   },
   "debugLevel": 0,
