@@ -1,35 +1,19 @@
-﻿:root {
-    --text: #0f172a;
-    --accent: #2563eb;
+.headline {
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text: #e5e7eb;
-        --accent: #60a5fa;
-    }
-}
-
-.skill-list {
-    list-style: none;
+.skills-list {
+    display: grid;
+    gap: 0.25rem;
     margin: 0;
-    padding: 0;
-    position: relative;
+    padding-left: 1.1rem;
 }
 
 .skill {
-    margin: 0;
-    font-size: 1.05rem;
     color: var(--text);
-    letter-spacing: .2px;
-}
-
-.headline {
-    margin: 0 0 1rem;
-    font-size: clamp(1rem, 1rem + 0.8vw, 1rem);
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 0.3rem;
 }

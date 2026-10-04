@@ -1,23 +1,26 @@
-﻿.main-layout {
-    background-color: #fdfaf4;
+.main-layout {
     min-height: 100vh;
-    color: #5a4a3b;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* top - midte - bund */
+    grid-template-rows: auto 1fr auto;
+    background: var(--bg);
+    color: var(--text);
 }
 
 .nav-bar {
     position: sticky;
     top: 0;
-    z-index: 1000; /* så den ligger over indhold */
+    z-index: 1000;
 }
 
 .main-content {
-    padding: 2rem;
+    width: min(100% - 2rem, 72rem);
+    margin-inline: auto;
+    padding-block: 2rem 4rem;
 }
 
-.footer {
-    position: sticky;
-    bottom: 0;
+@media print {
+    .main-content {
+        width: 100%;
+        padding: 0;
+    }
 }
