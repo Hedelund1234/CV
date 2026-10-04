@@ -1,87 +1,57 @@
-﻿.headline {
-    margin: 0 0 0.4rem; /* Reduceret afstand under overskriften */
-    font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.8rem);
+.headline {
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--text);
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 0.3rem;
 }
 
 .project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 0.5rem; /* Rykker hele listen tættere på Projekter-overskriften */
-    font-family: inherit; /* Sikrer samme font som resten af siden */
+    display: grid;
+    gap: 1.5rem;
 }
 
 .project-card {
+    padding: 1.5rem;
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 1rem 1rem 0.9rem;
-    box-shadow: var(--shadow);
-    transition: transform .16s ease, box-shadow .16s ease, border-color .2s ease;
+    border-radius: var(--radius);
 }
-
-    .project-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
-        border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
-    }
 
 .project-title {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     font-weight: 700;
     color: var(--text);
-    font-family: inherit;
+}
+
+.project-repo {
+    margin: 0.15rem 0 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--muted);
+    word-break: break-all;
 }
 
 .project-description {
-    margin: 0.2rem 0 0.8rem 0; /* Placerer beskrivelsen lige under titlen */
-    font-size: 1rem;
+    margin-top: 0.75rem;
     color: var(--muted);
-    line-height: 1.4;
-    font-family: inherit;
 }
 
-/* Sektions labels (Teknologier / Highlights) */
 .section-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--accent);
-    margin: 1rem 0 0.4rem 0;
-    font-weight: 800;
-    font-family: inherit;
+    margin: 1.25rem 0 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text);
 }
 
-/* Den fælles liste-stil */
 .point-list {
-    list-style: none;
-    padding: 0;
+    display: grid;
+    gap: 0.25rem;
     margin: 0;
+    padding-left: 1.1rem;
 }
-
-    .point-list li {
-        position: relative;
-        padding-left: 1.2rem;
-        margin-bottom: 0.3rem;
-        color: var(--text);
-        font-size: 0.95rem;
-        line-height: 1.4;
-        font-family: inherit; /* Sikrer ensartet font i punkterne */
-    }
-
-        .point-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--muted);
-            font-weight: bold;
-        }
 
 @media (min-width: 800px) {
     .project-details-grid {
@@ -91,19 +61,10 @@
     }
 }
 
-.project-repo {
-    margin: 0.1rem 0 0.4rem 0; /* Placeres tæt under titlen */
-    font-size: 0.75rem; /* Meget lille størrelse */
-    font-weight: 400; /* Ikke fed skrift */
-    color: var(--accent); /* Bruger din blå accent farve, men med lav gennemsigtighed */
-    opacity: 0.6; /* Gør den diskret */
-    font-family: monospace; /* Gør det tydeligt at det er kode/URL og nemt at læse */
-    letter-spacing: -0.2px;
-    word-break: break-all; /* Sikrer at lange links ikke ødelægger layoutet */
-}
-
-/* Gør den lidt tydeligere når man holder musen over kortet */
-.project-card:hover .project-repo {
-    opacity: 1;
-    transition: opacity 0.2s ease;
+@media print {
+    .project-card {
+        padding: 0.75rem 0;
+        border: 0;
+        break-inside: avoid;
+    }
 }
